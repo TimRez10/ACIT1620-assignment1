@@ -4,6 +4,24 @@ body {
     grid-template-rows: 1fr;
 }
 
+a:link {
+    color: #55869B;
+    text-decoration: none;
+}
+a:visited {
+    color: #55869B;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #D9827C;
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
 h1 {
     text-align: center;
     color: #5394A0;
@@ -16,11 +34,17 @@ h2 {
 article {
     grid-column: 2/3;
     grid-row: 1/2;
-    background-color: #e5e0d9;
+    background-color: #f7ecdb;
 }
 
 nav {
     grid-column: 1/2;
     grid-row: 1/2;
     background-color: #F9F3EC;
+}
+
+article > a {
+    position: relative;
+    float: right;
+    padding: 10px;
 }
