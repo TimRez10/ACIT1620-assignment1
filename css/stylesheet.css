@@ -43,8 +43,60 @@ nav {
     background-color: #F9F3EC;
 }
 
-article > a {
-    position: relative;
-    float: right;
-    padding: 10px;
+article > div {
+    padding: 5px;
+    text-align: right;
+    font-size: small;
+}
+
+article > div > a {
+    padding: 5px;
+
+}
+
+article section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 10px;
+}
+
+article section button {
+    border-radius: 12px;
+    border: 0;
+    margin-bottom: 10px;
+    color: white;
+    white-space: nowrap;
+}
+
+.b-new-note {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: #55869B;
+    padding: 8px 15px;
+    margin-right: 150px;
+}
+
+.b-dark-theme {
+    grid-column: 3/-1;
+    grid-row: 1/2;
+    background-color: #6F6A87;
+    padding: 2px 15px;
+    margin-left: 150px;
+}
+
+.note-area {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    border: 2px;
+    border-color: #5394A0;
+}
+
+.b-save {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.b-cancel {
+    grid-column: 2/3;
+    grid-row: 3/4;
 }
