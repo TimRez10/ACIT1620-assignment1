@@ -1,7 +1,7 @@
-
 body {
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 
 html, body {
@@ -43,6 +43,7 @@ article {
 
 article > div {
     padding: 5px;
+    margin-right: 5px;
     text-align: right;
     font-size: small;
 }
@@ -89,7 +90,7 @@ div button {
 
 .note-area {
     border: 2px solid #5394A0;
-    width: 99%;
+    width: 98%;
     height: 130px;
     padding: 5px;
     margin-top: 10px;
@@ -109,7 +110,8 @@ div button {
 
 footer div {
     display: flex;
-    justify-content:center
+    justify-content:center;
+    margin-bottom: 30px;
 }
 
 footer div a {
@@ -129,6 +131,7 @@ nav {
 nav ul {
     color:#4f7c90;
     list-style: square;
+    padding-left: 25px;
 }
 
 @media screen and (min-width:700px) {
