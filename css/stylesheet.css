@@ -9,11 +9,11 @@ html, body {
 }
 
 a:link {
-    color: #55869B;
+    color: #2E5052;
     text-decoration: none;
 }
 a:visited {
-    color: #55869B;
+    color: #2E5052;
     text-decoration: none;
 }
 
@@ -26,13 +26,9 @@ a:active {
     text-decoration: none;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
-    color: #5394A0;
-}
-h2 {
-    text-align: center;
-    color: #5394A0;
+    color: #2E5052;
 }
 
 article {
@@ -129,7 +125,7 @@ nav {
 }
 
 nav ul {
-    color:#4f7c90;
+    color:#2E5052;
     list-style: square;
     padding-left: 25px;
 }
