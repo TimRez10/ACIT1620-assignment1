@@ -1,7 +1,7 @@
+
 body {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-direction: column;
 }
 
 html, body {
@@ -123,9 +123,18 @@ nav {
     grid-column: 1/2;
     grid-row: 1/2;
     background-color: #F9F3EC;
+    height: 100%;
 }
 
 nav ul {
     color:#4f7c90;
     list-style: square;
+}
+
+@media screen and (min-width:700px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr;
+    }
 }
