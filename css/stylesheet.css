@@ -41,12 +41,6 @@ article {
     background-color: #f7ecdb;
 }
 
-nav {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    background-color: #F9F3EC;
-}
-
 article > div {
     padding: 5px;
     text-align: right;
@@ -121,4 +115,17 @@ footer div {
 footer div a {
     margin-left: 5px;
     margin-right: 5px;
+}
+
+/* SIDEBAR */
+
+nav {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: #F9F3EC;
+}
+
+nav ul {
+    color:#4f7c90;
+    list-style: square;
 }
