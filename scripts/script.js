@@ -1,14 +1,33 @@
 let theme = 0
+let thingsWithColors = [
+    "a:link",
+    "a:visited",
+    "a:hover",
+    "h1, h2",
+    "article",
+    "div button",
+    ".b-new-note",
+    ".b-dark-theme",
+    ".note-area",
+    ".b-save",
+    ".b-cancel",
+    "nav",
+    "nav ul"
+]
 
 document.querySelector(".b-dark-theme").onclick = function() {
+
     if (theme === 0) {
-        theme = 1
-        console.log("dark theme button pressed")
-        document.querySelector(".b-dark-theme").textContent = "Light Theme"
+        document.querySelector(".b-dark-theme").textContent = "Light Theme";
+        theme = 1;
     }
     else if (theme === 1) {
-        theme = 0
-        console.log("light theme button pressed")
-        document.querySelector(".b-dark-theme").textContent = "Dark Theme"
+        document.querySelector(".b-dark-theme").textContent = "Dark Theme";
+        theme = 0;
     }
+    for (x of thingsWithColors) {
+        let element = document.querySelectorAll(x);
+        element.forEach(singleElement =>  singleElement.classList.toggle("darkTheme"));
+    }
+
 }
