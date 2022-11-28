@@ -5,14 +5,14 @@ let thingsWithColors = [
     "a:hover",
     "h1, h2",
     "article",
-    "div button",
-    ".b-new-note",
-    ".b-dark-theme",
+    // "div button",
+    // ".b-new-note",
+    // ".b-dark-theme",
     ".note-area",
-    ".b-save",
-    ".b-cancel",
-    "nav",
-    "nav ul"
+    // ".b-save",
+    // ".b-cancel",
+    "aside",
+    "aside ul"
 ]
 
 document.querySelector(".b-dark-theme").onclick = function() {
