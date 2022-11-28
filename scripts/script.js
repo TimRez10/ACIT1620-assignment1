@@ -1,4 +1,5 @@
 let theme = 0
+let hidden = 0
 let thingsWithColors = [
     "a:link",
     "a:visited",
@@ -13,6 +14,12 @@ let thingsWithColors = [
     // ".b-cancel",
     "aside",
     "aside ul"
+]
+
+let noteFunctions = [
+    ".note-area",
+    ".b-save",
+    ".b-cancel",
 ]
 
 document.querySelector(".b-dark-theme").onclick = function() {
@@ -31,3 +38,28 @@ document.querySelector(".b-dark-theme").onclick = function() {
     }
 
 }
+
+function toggleNoteFunctions() {
+        for (x of noteFunctions) {
+            let element = document.querySelector(x);
+            element.classList.toggle("hideElem");
+        }
+}
+
+function newNoteShowClear() {
+
+    let noteArea = document.querySelector(".note-area")
+
+    if (noteArea.classList.contains("hideElem")) {
+        toggleNoteFunctions();
+    }
+    else {
+        noteArea.value = ' ';
+    }
+}
+
+document.querySelector(".b-cancel").addEventListener("click",toggleNoteFunctions);
+document.querySelector(".b-new-note").addEventListener("click",newNoteShowClear);
+
+
+

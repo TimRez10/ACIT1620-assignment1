@@ -188,3 +188,9 @@ article.darkTheme {background-color: #202C39;}
 aside.darkTheme {background-color: #283845;}
 
 aside ul.darkTheme {color: #CBE2DB}
+
+/* HIDE ELEMENTS */
+
+.hideElem {
+    display: none;
+}
