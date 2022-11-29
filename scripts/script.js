@@ -1,5 +1,6 @@
 let theme = 0
 let hidden = 0
+let notesArray = [{title:"note one", body:"this is my first note"}]
 let thingsWithColors = [
     "a:link",
     "a:visited",
@@ -22,6 +23,7 @@ let noteFunctions = [
     ".b-cancel",
 ]
 
+let noteArea = document.querySelector(".note-area")
 document.querySelector(".b-dark-theme").onclick = function() {
 
     if (theme === 0) {
@@ -48,8 +50,6 @@ function toggleNoteFunctions() {
 
 function newNoteShowClear() {
 
-    let noteArea = document.querySelector(".note-area")
-
     if (noteArea.classList.contains("hideElem")) {
         toggleNoteFunctions();
     }
@@ -61,5 +61,13 @@ function newNoteShowClear() {
 document.querySelector(".b-cancel").addEventListener("click",toggleNoteFunctions);
 document.querySelector(".b-new-note").addEventListener("click",newNoteShowClear);
 
+function saveTextAreaValue() {
+    title = prompt("Enter a title for your note")
+    noteObject = {title: title, body: noteArea.value}
+    notesArray.push(noteObject)
+    let newListItem = document.createElement('li');
+    newListItem.textContent = title;
+    document.querySelector("aside ul").appendChild(newListItem);
+}
 
-
+document.querySelector(".b-save").addEventListener("click",saveTextAreaValue);
