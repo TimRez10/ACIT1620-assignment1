@@ -22,9 +22,10 @@ a:visited {
     text-decoration: none;
 }
 
-a:hover {
+a:hover, li:hover {
     color: #D9827C;
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:active {

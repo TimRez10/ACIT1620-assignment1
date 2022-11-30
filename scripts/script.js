@@ -1,6 +1,5 @@
 let theme = 0
-let hidden = 0
-let notesArray = [{title:"note one", body:"this is my first note"}]
+const notesArray = [{title:"note one", body:"this is my first note"}]
 let thingsWithColors = [
     "a:link",
     "a:visited",
@@ -53,9 +52,7 @@ function newNoteShowClear() {
     if (noteArea.classList.contains("hideElem")) {
         toggleNoteFunctions();
     }
-    else {
-        noteArea.value = ' ';
-    }
+    noteArea.value = ' ';
 }
 
 document.querySelector(".b-cancel").addEventListener("click",toggleNoteFunctions);
@@ -70,4 +67,22 @@ function saveTextAreaValue() {
     document.querySelector("aside ul").appendChild(newListItem);
 }
 
+
 document.querySelector(".b-save").addEventListener("click",saveTextAreaValue);
+
+function clickOnNoteTitle(ev) {
+    if (ev.target.tagName === "LI") {
+        if (noteArea.classList.contains("hideElem")) {
+            toggleNoteFunctions();
+        }
+        for (noteObj of notesArray) {
+            console.log(ev.target.textContent);
+            console.log(noteObj.title);
+            if (ev.target.textContent == noteObj.title) {
+                noteArea.value = noteObj.body;
+            }
+        }
+    }
+}
+
+document.querySelector("aside ul").addEventListener("click",clickOnNoteTitle);
