@@ -2,14 +2,19 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     height: 100vh;
-}
-
-main {
     display: flex;
     flex-direction: column;
 }
 
-html, main {
+article {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: #f7ecdb;
+}
+
+html {
     height: 100%;
 }
 
@@ -37,14 +42,6 @@ h1, h2 {
     color: #2E5052;
 }
 
-article {
-    display: flex;
-    flex-direction: column;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    background-color: #f7ecdb;
-}
-
 nav {
     padding: 5px;
     margin-right: 5px;
@@ -54,12 +51,11 @@ nav {
 
 nav > a {
     padding: 5px;
-
 }
 
 /* BUTTONS AND NOTE */
 
-section {
+main {
     margin: 10px;
 }
 
@@ -146,7 +142,7 @@ aside ul li {
 }
 
 @media screen and (min-width:700px) {
-    main {
+    body {
         display: grid;
         grid-template-columns: 1fr 4fr;
         grid-template-rows: 1fr;

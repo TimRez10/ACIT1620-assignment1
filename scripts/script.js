@@ -46,8 +46,8 @@ document.querySelector(".b-dark-theme").onclick = function() {
 }
 
 function toggleNoteFunctions() {
-        for (x of noteFunctions) {
-            let element = document.querySelector(x);
+        for (item of noteFunctions) {
+            let element = document.querySelector(item);
             element.classList.toggle("hideElem");
         }
 }
