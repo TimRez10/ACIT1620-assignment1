@@ -138,6 +138,11 @@ aside ul {
     color:#2E5052;
     list-style: square;
     padding-left: 25px;
+    padding-right: 3px;
+}
+
+aside ul li {
+    width: fit-content;
 }
 
 @media screen and (min-width:700px) {
@@ -168,11 +173,11 @@ article.darkTheme {background-color: #202C39;}
 
         /* BUTTONS AND NOTE */
 
-/* div button.darkTheme {color: white;}
+div button.darkTheme {color: white;}
 
 .b-new-note.darkTheme {background-color: #42728A;}
 
-.b-dark-theme.darkTheme {background-color: #42728A;} */
+.b-dark-theme.darkTheme {background-color: #42728A;}
 
 .note-area.darkTheme {
     border: 2px solid #95BDC4;
@@ -180,9 +185,9 @@ article.darkTheme {background-color: #202C39;}
     color:white
 }
 
-/* button.b-save.darkTheme {background-color: #151b1e;}
+button.b-save.darkTheme {background-color: #577d89;}
 
-.b-cancel.darkTheme {background-color: #6C98A7;} */
+.b-cancel.darkTheme {background-color: #577d89;}
 
         /* SIDEBAR */
 
