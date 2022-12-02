@@ -1,10 +1,20 @@
 body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    margin: 0;
 }
 
-html, body {
+article {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: #f7ecdb;
+}
+
+html {
     height: 100%;
 }
 
@@ -17,9 +27,10 @@ a:visited {
     text-decoration: none;
 }
 
-a:hover {
+a:hover, li:hover {
     color: #D9827C;
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:active {
@@ -31,27 +42,20 @@ h1, h2 {
     color: #2E5052;
 }
 
-article {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    background-color: #f7ecdb;
-}
-
-article > div {
+nav {
     padding: 5px;
     margin-right: 5px;
     text-align: right;
     font-size: small;
 }
 
-article > div > a {
+nav > a {
     padding: 5px;
-
 }
 
 /* BUTTONS AND NOTE */
 
-section {
+main {
     margin: 10px;
 }
 
@@ -62,6 +66,7 @@ div button {
     border-radius: 10px;
     margin: 8px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .first-b-row {
@@ -87,11 +92,12 @@ div button {
 .note-area {
     border: 2px solid #5394A0;
     width: 98%;
-    height: 130px;
+    min-height: 200px;
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: #fcf8f3;
+    resize: none;
 }
 
 .b-save {
@@ -117,17 +123,22 @@ footer div a {
 
 /* SIDEBAR */
 
-nav {
+aside {
     grid-column: 1/2;
     grid-row: 1/2;
     background-color: #F9F3EC;
     height: 100%;
 }
 
-nav ul {
+aside ul {
     color:#2E5052;
     list-style: square;
     padding-left: 25px;
+    padding-right: 3px;
+}
+
+aside ul li {
+    width: fit-content;
 }
 
 @media screen and (min-width:700px) {
@@ -136,4 +147,52 @@ nav ul {
         grid-template-columns: 1fr 4fr;
         grid-template-rows: 1fr;
     }
+    
+    footer {
+        margin-top: auto;
+    }
+    
+}
+
+/* DARK THEME */
+
+
+a:link.darkTheme {color: #CBE2DB;}
+
+a:visited.darkTheme {color: #CBE2DB;}
+
+a:hover.darkTheme {color: #D9827C;}
+
+h1.darkTheme, h2.darkTheme {color: #FAFFEB;}
+
+article.darkTheme {background-color: #202C39;}
+
+        /* BUTTONS AND NOTE */
+
+div button.darkTheme {color: white;}
+
+.b-new-note.darkTheme {background-color: #42728A;}
+
+.b-dark-theme.darkTheme {background-color: #42728A;}
+
+.note-area.darkTheme {
+    border: 2px solid #95BDC4;
+    background-color: #283845;
+    color:white
+}
+
+button.b-save.darkTheme {background-color: #577d89;}
+
+.b-cancel.darkTheme {background-color: #577d89;}
+
+        /* SIDEBAR */
+
+aside.darkTheme {background-color: #283845;}
+
+aside ul.darkTheme {color: #CBE2DB}
+
+/* HIDE ELEMENTS */
+
+.hideElem {
+    display: none;
 }
